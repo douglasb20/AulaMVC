@@ -2,18 +2,15 @@
 
 namespace Source\Controllers\Financeiro;
 
-use League\Plates\Engine;
+use Source\Controllers\Financeiro\DefaultWeb;
 
-class Web{
+class Web extends DefaultWeb{
 
-    private $view;
+    public $view;
 
     public function __construct()
     {
-        $this->view = Engine::create(  __DIR__ . "/../../View",  "php");
+        parent::__construct();
     }
 
-    public function home($data){
-        echo $this->view->render('home',$data);
-    }
 }
