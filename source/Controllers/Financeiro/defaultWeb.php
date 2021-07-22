@@ -13,5 +13,6 @@ class DefaultWeb{
     
     public function home($data){
         echo $this->view->render('home',$data);
+        var_dump($data);
     }
 }
